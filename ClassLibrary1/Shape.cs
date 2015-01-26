@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace SharpShapes   
 {
-    public abstract class Shape
+    abstract public class Shape
     {
         // Width, Height, Perimeter, Area, BorderColor, FillColor, NumberOfSides
         // properties?  or calculated?
@@ -20,24 +20,31 @@ namespace ClassLibrary1
         /// <summary>
         /// The color of the border of the shape, when drawn.
         /// </summary>
-        public Color BorderColor { get; set; }
+        public Color BorderColor { 
+            get; 
+            set; }
 
         /// <summary>
         /// The number of sides of this shape.
         /// </summary>
-        public virtual int SidesCount { get; }
+        abstract public int SidesCount { get; }
         
+        public Shape()
+        {
+            BorderColor = Color.Tomato;
+            FillColor = Color.Bisque;
+        }
         /// <summary>
-        /// Calcualtes the area of the shape.
+        /// Calculates the area of the shape.
         /// </summary>
         // <returns> the area of this shape </returns>
-        public abstract decimal Area() { }
+        abstract public decimal Area();
 
         /// <summary>
         /// Calculates the perimeter of the shape.
         /// </summary>
         // <returns> the perimeter of this shape </returns>
-        public abstract int Perimeter() { }
+        abstract public decimal Perimeter();
 
         /// <summary>
         /// Scales the shape in size.
@@ -45,7 +52,7 @@ namespace ClassLibrary1
         ///<param name="percent"> the percentage by which to scale the shape
         ///</param>
         // Resizes a shape by percent
-        public abstract void scale (int percent) { }
+        abstract public void Scale (int percent);
     
     }
 }

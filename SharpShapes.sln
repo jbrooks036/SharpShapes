@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A5DE97D1-1161-4537-A7B4-927224282B23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpShapes", "ClassLibrary1\SharpShapes.csproj", "{A5DE97D1-1161-4537-A7B4-927224282B23}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSharpShapes", "TestSharpShapes\TestSharpShapes.csproj", "{4872399A-4565-42D6-BCF3-83979321335B}"
 EndProject
