@@ -15,7 +15,19 @@ namespace SharpShapes
 
         public Square(int side) : base (side, side)
         {
+            // if (side)
+            //     throw new ArgumentException();
             this.side = side;
+        }
+
+        public override void Scale(int percent)
+        {
+            if (percent <= 0)
+            {
+                throw new ArgumentException();
+            }
+            this.side = percent * side / 100;
+            base.Scale(percent);
         }
     } 
 }

@@ -14,7 +14,6 @@ namespace TestSharpShapes
             Square square = new Square(40);
             Assert.AreEqual(40, square.Side);
         }
-/*
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TestSquareConstructorSanityCheckSide()
@@ -29,6 +28,7 @@ namespace TestSharpShapes
             Square square = new Square(-1);
         }
 
+/*
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TestSquareConstructorSanityCheckRequiresValue()
@@ -36,15 +36,25 @@ namespace TestSharpShapes
             Square square = new Square();
         }
 
+*/
         // TEST SCALING
         [TestMethod]
-        public void TestScaleSquare200Percent()
+        public void TestScaleSquare100Percent()
         {
-            Square square = new Square(10);
-            square.Scale(200);
+            Square square = new Square(20);
+            square.Scale(100);
             Assert.AreEqual(20, square.Side);
         }
 
+        [TestMethod]
+        public void TestScaleSquare200Percent()
+        {
+            Square square = new Square(20);
+            square.Scale(200);
+            Assert.AreEqual(40, square.Side);
+        }
+
+/*
         [TestMethod]
         public void TestScaleSquare150Percent()
         {
@@ -83,7 +93,9 @@ namespace TestSharpShapes
             Square square = new Square(10);
             square.Scale(-5);
         }
+*/
 
+        // MISC OTHER TESTS
         [TestMethod]
         public void TestSquareSidesCount()
         {
@@ -109,11 +121,10 @@ namespace TestSharpShapes
         public void TestSquareDefaultColors()
         {
             Square square = new Square(10);
-            Assert.AreEqual(System.Drawing.Color.Tomato, square.BorderColor());
-            Assert.AreEqual(System.Drawing.Color.Bisque, square.FillColor());
+            Assert.AreEqual(System.Drawing.Color.Tomato, square.BorderColor);
+            Assert.AreEqual(System.Drawing.Color.Bisque, square.FillColor);
         }
 
-*/
  
     }
 }
