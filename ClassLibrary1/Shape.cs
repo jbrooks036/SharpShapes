@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing; // added for Color
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing; // added for Color
 
 namespace SharpShapes   
 {
@@ -49,9 +49,7 @@ namespace SharpShapes
         /// <summary>
         /// Scales the shape in size.
         /// </summary>
-        ///<param name="percent"> the percentage by which to scale the shape
-        ///</param>
-        // Resizes a shape by percent
+        ///<param name="percent"> the percentage by which to scale the shape </param>
         abstract public void Scale (int percent);
     
     }
