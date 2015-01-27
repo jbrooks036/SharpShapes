@@ -54,7 +54,6 @@ namespace TestSharpShapes
             Assert.AreEqual(40, square.Side);
         }
 
-/*
         [TestMethod]
         public void TestScaleSquare150Percent()
         {
@@ -81,6 +80,7 @@ namespace TestSharpShapes
         }
        
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestScaleSquare0Percent()
         {
             Square square = new Square(10);
@@ -88,12 +88,12 @@ namespace TestSharpShapes
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
         public void TestScaleSquareNegativePercent()
         {
             Square square = new Square(10);
             square.Scale(-5);
         }
-*/
 
         // MISC OTHER TESTS
         [TestMethod]
